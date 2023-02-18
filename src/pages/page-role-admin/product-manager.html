@@ -1,0 +1,188 @@
+<div class="container">
+  <div class="row">
+    <h1 style="text-align: center">Manager Product</h1>
+    <div class="col-lg-3">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#manager-product"
+            >Product</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#manager-category">Category</a>
+        </li>
+      </ul>
+    </div>
+    <div class="col-lg-6">
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">ID :</span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.id"
+          ,
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Product Name :</span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.productName"
+          ,
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Description :</span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.productDescription"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Price :</span>
+        <input
+          type="text"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.price"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping">Img :</span>
+        <input
+          type="file"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.img"
+          id="imgID"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"
+          >Detail Image 1 :</span
+        >
+        <input
+          type="file"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.dtimg1"
+          id="dtimg1ID"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"
+          >Detail Image 2 :</span
+        >
+        <input
+          type="file"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.dtimg2"
+          id="dtimg2ID"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <span class="input-group-text" id="addon-wrapping"
+          >Detail Image 3 :</span
+        >
+        <input
+          type="file"
+          class="form-control"
+          aria-label="Username"
+          aria-describedby="addon-wrapping"
+          ng-model="input.dtimg3"
+          id="dtimg3ID"
+        />
+      </div>
+      <div class="input-group flex-nowrap">
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          ng-model="input.category"
+        >
+          <option value="{{category.id}}" ng-repeat="category in listCategory">
+            {{category.id}} -{{category.categoryName}}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="col-lg-3">
+      <div class="">
+        <button class="product__buy--btn btn">
+          <a
+            href=""
+            style="text-decoration: none; color: aliceblue"
+            ng-click="add()"
+            >Add</a
+          >
+        </button>
+        <button class="product__buy--btn btn">
+          <a
+            href=""
+            style="text-decoration: none; color: aliceblue"
+            ng-click="update()"
+            >Update</a
+          >
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">ID</th>
+          <th scope="col">Product Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Img</th>
+          <th scope="col">Detail Img 1</th>
+          <th scope="col">Detail Img 2</th>
+          <th scope="col">Detail Img 3</th>
+          <th scope="col">Category</th>
+          <th scope="col">Funtion</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="pd in listProduct">
+        <tr>
+          <th scope="row">{{$index +1}}</th>
+          <td>{{pd.id}}</td>
+          <td>{{pd.productName}}</td>
+          <td>{{pd.productDescription}}</td>
+          <td>{{pd.price}}.00$</td>
+          <td>{{pd.img}}</td>
+          <td>{{pd.dtimg1}}</td>
+          <td>{{pd.dtimg2}}</td>
+          <td>{{pd.dtimg3}}</td>
+
+          <td>{{pd.idcategory}}</td>
+          <td>
+            <a
+              href="#/product-manager/remove/{{pd.id}}"
+              ng-click="delete($event,$index)"
+              >Delete</a
+            >
+            <a
+              href="#/product-manager/detail/{{pd.id}}"
+              ng-click="detail($event,$index)"
+              >Detail</a
+            >
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,336 @@
+:root {
+  --primary-color: #1c1d1b;
+  --primary--font: "Kanit", sans-serif;
+  --white-color: #fff;
+  --balck--color: #000;
+}
+html {
+  margin: 0;
+  padding: 0;
+  /* font-size: 10%; */
+}
+img {
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 576px) {
+  .price {
+    display: none;
+  }
+  .herader-item {
+    margin-bottom: 100px;
+  }
+}
+.header__section {
+  margin-top: 20px;
+}
+.header__section img {
+  width: 200px;
+  height: 100px;
+}
+.header-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.navbar {
+  text-align: center;
+  background-color: #fff;
+}
+.nav-item {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-item .nav-link {
+  text-transform: uppercase;
+  font-family: var(--primary--font);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+.navbar-collapse {
+  justify-content: space-around;
+}
+.nav__link--active {
+  color: var(--primary-color);
+}
+.nav-item .nav__search {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+.nav__login {
+  padding: 0 20px;
+  font-size: 1.4rem;
+}
+.nav__login a {
+  text-decoration: none;
+  color: var(--primary-color);
+  padding: 0 10px;
+}
+.nav__login a:hover {
+  border-bottom: 1px solid;
+}
+
+.bg-body-tertiary {
+  background-color: var(--white-color) !important;
+}
+.price_item {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.price {
+  /* font-family: 'Kanit', sans-serif; */
+  /* font-weight: 100; */
+  padding-left: 30px;
+}
+.bg-success-icon {
+  background-color: var(--primary-color) !important;
+  border-radius: 20px;
+  line-height: 12px;
+  font-size: 12px;
+}
+.header__icon {
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+.carousel-item {
+  width: 100%;
+  max-height: 700px;
+  min-height: 300px;
+}
+/* Product  */
+.product__title {
+  text-align: center;
+  font-family: var(--primary--font);
+  font-size: 35px;
+  font-weight: 600;
+  margin: 40px 0;
+  position: relative;
+}
+.product__title::after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: 10px;
+}
+.product__nav {
+  margin-bottom: 30px;
+}
+.product__item .product__item--link {
+  color: var(--black--color);
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  position: relative;
+}
+.nav-link.product__item--link.active::after {
+  content: " ";
+  display: block;
+  width: 26px;
+  height: 2px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 22px;
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: 10px;
+  position: absolute;
+}
+.product__img img {
+  width: 100%;
+}
+.product__img--item {
+  width: 260px;
+  height: 270px;
+  object-fit: contain;
+}
+
+/* product item  */
+.card__item {
+  border: none;
+  text-align: center;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-img-top img {
+  width: 100%;
+}
+.card-img-top:hover {
+  transform: scale(103%);
+  cursor: pointer;
+}
+
+.card-body {
+}
+.card-body .card-title {
+  font-family: var(--primary--font);
+  font-weight: 900;
+  padding-top: 10px;
+}
+.card-body .card-text {
+  font-family: var(--primary--font);
+  font-weight: 500;
+}
+
+/* blog section */
+.blog__section {
+  /* text-align: center; */
+  margin-bottom: 100px;
+}
+.blog__item img {
+  width: 100%;
+}
+.blog__title {
+  text-align: center;
+  font-family: var(--primary--font);
+  font-size: 35px;
+  font-weight: 600;
+  margin: 40px 0;
+  position: relative;
+}
+.blog__title::after {
+  content: " ";
+  display: block;
+  width: 100px;
+  height: 5px;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(50%);
+  margin-top: 10px;
+}
+.blog__item {
+}
+.blog_desc {
+  padding: 10px 0;
+}
+.blog__time {
+  padding: 10px 0;
+  font-size: var(--primary--font);
+  color: #999;
+}
+.blog__time i {
+  padding: 0 10px;
+}
+.blog__item--title {
+  font-size: 20px;
+  font-family: var(--primary--font);
+  font-weight: 500;
+}
+.blog__item--subtitle {
+  font-size: 16px;
+  font-family: var(--primary--font);
+  font-weight: 200;
+}
+.contact__list {
+  display: flex;
+}
+.contact__item {
+  padding-right: 20px;
+  padding-left: 0;
+}
+.contact__item li {
+  list-style-type: none;
+  font-size: 1.5rem;
+}
+.contact__item a {
+  text-decoration: none;
+  padding: 10px 0;
+  line-height: 30px;
+  /* font-family: 'Roboto', sans-serif; */
+  font-family: var(--primary--font);
+  color: var(--black--color);
+  font-weight: 200;
+}
+/* footer section */
+.footer__section {
+  background-color: #f3f6fa;
+  padding-top: 50px;
+}
+.footer__address p {
+  padding-top: 12px;
+  margin-bottom: 0;
+}
+.footer__address a {
+  text-decoration: none;
+  color: var(--black--color);
+  cursor: text;
+  font-size: 1.5rem;
+}
+.footer__heading {
+  font-family: var(--primary--font);
+  font-weight: 500;
+  font-size: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contact__title {
+  font-family: var(--primary--font);
+  font-weight: 700;
+  font-size: 2rem;
+}
+.contact__text {
+  font-family: var(--primary--font);
+  font-weight: 200;
+  font-size: 1.5rem;
+}
+.form-control {
+  border-radius: 0 !important;
+  padding: 10px 5px;
+}
+.btn__Subscribe {
+  padding: 10px;
+  border-radius: 0;
+  background-color: var(--primary-color);
+  border: none;
+  font-family: var(--primary--font);
+  font-weight: 700;
+}
+.footer__icon {
+  cursor: pointer;
+}
+.footer__icon i {
+  font-size: 20px;
+  padding: 10px;
+  margin: 30px 10px;
+  order: 1px solid #ccc;
+  border-radius: 60px;
+  height: 40px;
+  width: 40px;
+}
+.footer__icon i:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+.footer__icon a {
+  color: var(--black--color);
+  text-decoration: none;
+}
+/* modal */
+.open {
+  display: block;
+}
+.about__section {
+  margin-bottom: 340px;
+}
+.about__title {
+  /* font-family: var(--primary-font); */
+  margin: 40px 0;
+  font-size: 30px;
+}
+.about__text {
+  justify-content: center;
+  font-size: 15px;
+}
+.login-disable {
+  display: none;
+}

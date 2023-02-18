@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assm</title>
+    <link rel="icon" type="image/x-icon" href="../assets/img/zazalogo.png">
+    <!-- Link pluin bootstrap -->
+    <link rel="stylesheet" href="../css/plugin/css/bootstrap.min.css" />
+    <!-- link font icon -->
+    <link rel="stylesheet" href="../assets/fonts/css/all.min.css" />
+    <!-- link custom css -->
+    <link rel="stylesheet" href="../css/custom/style.css" />
+    <!-- link login css -->
+    <link rel="stylesheet" href="../css/custom/login.css" />
+    <!-- link shop css -->
+    <link rel="stylesheet" href="../css/custom/shop.css" />
+    <!-- link cart css -->
+    <link rel="stylesheet" href="../css/custom/cart.css" />
+    <!-- link product manager css  -->
+    <link rel="stylesheet" href="../css/custom/product-manger.css" />
+    <!-- css detail product  -->
+    <link rel="stylesheet" href="../css/custom/detail-product.css" />
+  </head>
+  <body>
+    <!-- <header ng-include="'../src/layout/header.html'"></header> -->
+
+    <header ng-include="'../src/layout/header.html'"></header>
+    <section ng-view></section>
+    <footer ng-include="'../src/layout/footer.html'"></footer>
+
+    <!-- Nhúng thư viện pagination  -->
+    <!-- <script src="../js/custom/dirPagination.js"></script> -->
+    <!--  -->
+    <script src="../js/plugin/js/bootstrap.min.js"></script>
+    <script src="../lib/angular.min.js"></script>
+    <script src="../lib/angular-route.min.js"></script>
+    <!-- Nhung file controller -->
+    <script src="./controller/product/product-controller.js"></script>
+    <script src="./controller/product/showDetail.js"></script>
+    <script src="./controller/cart/cart-controller.js"></script>
+    <script src="./controller/login/login-controller.js"></script>
+    <script src="./controller/login/register-controller.js"></script>
+    <script src="./controller/product/category-controller.js"></script>
+    <script src="./controller/login/fogot-pass-controller.js"></script>
+    <!-- Nhung API  -->
+    <script src="./config/Api.js"></script>
+    <!-- Nhúng router -->
+    <script src="router.js"></script>
+  </body>
+</html>

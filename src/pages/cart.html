@@ -1,0 +1,66 @@
+<div class="cart-pay__section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="row">
+          <!-- <h2>Form test input</h2>
+          <input type="text" ng-model="inputValue.name" />
+          <p ng-if="valid.name==false">Trống</p>
+          <input type="text" ng-model="inputValue.price" />
+          <p ng-if="valid.name==false">Trống</p>
+          <input type="text" ng-model="inputValue.type" />
+          <p ng-if="valid.name==false">Trống</p>
+          <button ng-click="save()">Lưu</button> -->
+
+          <div class="row" ng-repeat="pd in listProductsInCart">
+            <div class="cart-pay_product">
+              <img
+                class="cart-pay_product--img"
+                src="/assets/img/{{pd.img}}"
+                alt=""
+              />
+              <div class="cart-pay_product-part">
+                <p class="cart-pay_product--name">{{pd.productName}}</p>
+                <p class="cart-pay_product--desc">{{pd.price}}.00$</p>
+                <span class="cart-pay_product--size">Size : {{pd.size}}</span>
+                <span class="cart-pay_product--quantity"
+                  >Quantity : {{pd.quantity}}</span
+                >
+                <br />
+                <span class="cart-pay_product--icon"
+                  ><i class="fa-regular fa-heart"></i
+                ></span>
+                <span class="cart-pay_product--icon"
+                  ><i
+                    class="fa-regular fa-trash-can"
+                    ng-click="delete($event,$index)"
+                  ></i
+                ></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <h2 style="margin-bottom: 20px">Summary</h2>
+        <div class="subtotal">
+          <span>Subtotal</span>
+          <p class="subtotal_price" ng-model="totalPrice">
+            {{totalPrice}}.00 $
+          </p>
+        </div>
+        <div class="estimated">
+          <span>Estimated Delivery & Handling</span>
+          <span class="delivery">Free</span>
+        </div>
+        <div class="Total">
+          <span>Total</span>
+          <span class="total" ng-model="totalPrice">{{totalPrice}}.00 $</span>
+        </div>
+        <button class="cart-pay-btn product__buy--btn btn">
+          <a href="#pay" ng-click="show()">Order</a>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

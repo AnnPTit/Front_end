@@ -1,0 +1,219 @@
+{
+  "giay": [
+    {
+      "productName": "productName 2",
+      "price": 37,
+      "productDescription": "productDescription 2",
+      "img": "product2.jpg",
+      "dtimg1": "dt-prd2-1.jpg",
+      "dtimg2": "dt-prd2-2.jpg",
+      "dtimg3": "dt-prd2-3.jpg",
+      "id": "2",
+      "idcategory": 1
+    },
+    {
+      "productName": "productName 3",
+      "price": 95,
+      "productDescription": "productDescription 3",
+      "img": "product3.jpg",
+      "dtimg1": "dt-prd3-1.jpg",
+      "dtimg2": "dt-prd3-2.jpg",
+      "dtimg3": "dt-prd3-3.jpg",
+      "id": "3",
+      "idcategory": 1
+    },
+    {
+      "productName": "productName 4",
+      "price": 91,
+      "productDescription": "productDescription 4",
+      "img": "product4.jpg",
+      "dtimg1": "dt-prd4-1.jpg",
+      "dtimg2": "dt-prd4-2.jpg",
+      "dtimg3": "dt-prd4-3.jpg",
+      "id": "4",
+      "idcategory": 1
+    },
+    {
+      "id": 5,
+      "productName": "sp2",
+      "productDescription": "dac",
+      "price": 12,
+      "img": "dt-prd1-3.jpg",
+      "dtimg1": "dt-prd1-4.jpg",
+      "dtimg2": "dt-prd1-4.jpg",
+      "dtimg3": "dt-prd1-4.jpg",
+      "idcategory": 3
+    },
+    {
+      "id": 6,
+      "productName": "productName 5",
+      "productDescription": "productDescription 5",
+      "price": 37,
+      "img": "product3.jpg",
+      "dtimg1": "product4.jpg",
+      "dtimg2": "product2.jpg",
+      "dtimg3": "product2.jpg",
+      "idcategory": 1
+    },
+    {
+      "id": 9,
+      "productName": "Giay The Thao",
+      "productDescription": "Vip vai l",
+      "price": 100,
+      "img": "product1.jpg",
+      "dtimg1": "dt-prd1-1.jpg",
+      "dtimg2": "dt-prd1-2.jpg",
+      "dtimg3": "dt-prd1-3.jpg",
+      "idcategory": 1
+    },
+    {
+      "id": 10,
+      "productName": "giay nu",
+      "productDescription": "dep vl",
+      "price": 100,
+      "img": "dt-prd2-1.jpg",
+      "dtimg1": "dt-prd2-2.jpg",
+      "dtimg2": "dt-prd2-3.jpg",
+      "dtimg3": "dt-prd2-3.jpg",
+      "idcategory": 2
+    },
+    {
+      "productName": "giay cao got",
+      "productDescription": "dep vl",
+      "price": 56,
+      "img": "dt-prd1-6.jpg",
+      "dtimg1": "product1.jpg",
+      "dtimg2": "dt-prd1-2.jpg",
+      "dtimg3": "dt-prd1-4.jpg",
+      "idcategory": 2,
+      "id": 11
+    },
+    {
+      "productName": "Giay banh mi",
+      "productDescription": "Giay dep",
+      "price": 34,
+      "img": "dt-prd2-3.jpg",
+      "dtimg1": "dt-prd3-3.jpg",
+      "dtimg2": "dt-prd3-1.jpg",
+      "dtimg3": "product3.jpg",
+      "idcategory": 3,
+      "id": 12
+    },
+    {
+      "productName": "Giay cua bỉn",
+      "productDescription": "Hà tan bỉn",
+      "price": 1,
+      "img": "product3.jpg",
+      "dtimg1": "dt-prd3-1.jpg",
+      "dtimg2": "dt-prd3-3.jpg",
+      "dtimg3": "dt-prd3-2.jpg",
+      "idcategory": 1,
+      "id": 13
+    }
+  ],
+  "Accounts": [
+    {
+      "id": 1,
+      "fristName": "Pham",
+      "lastName": "An",
+      "email": "anptph27230@fpt.edu.vn",
+      "address": "Ha Noi",
+      "city": "Ha Noi",
+      "phone": "0389718892",
+      "password": "12345",
+      "repassword": "12345",
+      "role": 0
+    },
+    {
+      "fristName": "Pham",
+      "lastName": "An",
+      "email": "phamthanhancoc@gmail.com",
+      "address": "ha noi",
+      "city": "Ha Noi",
+      "phone": "0123456789",
+      "password": "12345",
+      "repassword": "12345",
+      "role": 1,
+      "id": 2
+    },
+    {
+      "id": 3,
+      "fristName": "Pham",
+      "lastName": "Thanh An",
+      "email": "PhamThanhAnzwz@gmail.com",
+      "address": "ha noi",
+      "city": "Ha Noi",
+      "phone": "0389718892",
+      "password": "12345",
+      "repassword": "12345",
+      "role": 1
+    },
+    {
+      "fristName": "Pham",
+      "lastName": "An",
+      "email": "phamthanhancoc1@gmail.com",
+      "address": "ha noi",
+      "city": "Ha Noi",
+      "phone": "11101",
+      "password": "11101",
+      "repassword": "11101",
+      "role": 1,
+      "id": 4
+    },
+    {
+      "fristName": "Bui",
+      "lastName": "Dat",
+      "email": "datbtph28036@fpt.edu.vn",
+      "address": "Phuong Canh",
+      "city": "Ha Noi",
+      "phone": "0123445789",
+      "password": "123Thoi",
+      "repassword": "123Thoi",
+      "role": 1,
+      "id": 5
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "categoryName": "Men shoes"
+    },
+    {
+      "id": "2",
+      "categoryName": "Woman shoes"
+    },
+    {
+      "id": "3",
+      "categoryName": "Kid Shoes"
+    },
+    {
+      "id": "4",
+      "categoryName": "Hot shoes"
+    },
+    {
+      "id": "5",
+      "categoryName": "Bla ksbjdvs"
+    }
+  ],
+  "productInCart": [
+    {
+      "productName": "productName 5",
+      "productDescription": "productDescription 5",
+      "price": 37,
+      "size": "40",
+      "quantity": 2,
+      "img": "product3.jpg",
+      "id": 2
+    },
+    {
+      "productName": "productName 1",
+      "productDescription": "productDescription 1",
+      "price": 37,
+      "size": "36",
+      "quantity": 2,
+      "img": "dt-prd1-2.jpg",
+      "id": 3
+    }
+  ],
+  "purchasedProduct": []
+}

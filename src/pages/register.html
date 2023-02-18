@@ -1,0 +1,153 @@
+<div class="container register__main">
+  <h3 class="login__title">Register</h3>
+
+  <form class="row g-3">
+    <div class="col-md-4">
+      <label for="validationServer01" class="form-label">First name</label>
+      <!-- Them class isValid để check đúng  -->
+      <input
+        type="text"
+        class="form-control"
+        id="validationServer01"
+        value=""
+        required
+        ng-model="inputUser.fristName"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServer02" class="form-label">Last name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="validationServer02"
+        value=""
+        required
+        ng-model="inputUser.lastName"
+      />
+      <div class="valid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-4">
+      <label for="validationServerUsername" class="form-label">Username</label>
+      <div class="input-group has-validation">
+        <span class="input-group-text" id="inputGroupPrepend3">@</span>
+        <!-- Thêm class is-valied để check sai -->
+        <input
+          type="email"
+          class="form-control"
+          id="validationServerUsername"
+          aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback"
+          required
+          ng-model="inputUser.email"
+        />
+        <div id="validationServerUsernameFeedback" class="invalid-feedback">
+          Please choose a username.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="validationServer03" class="form-label">Address</label>
+      <!-- Thêm class is-valied để check sai -->
+      <input
+        type="text"
+        class="form-control"
+        id="validationServer03"
+        aria-describedby="validationServer03Feedback"
+        required
+        ng-model="inputUser.address"
+      />
+      <div id="validationServer03Feedback" class="invalid-feedback">
+        Please provide a valid address.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <!-- Thêm class is-valied để check sai<label for="val -->
+      <label for="" class="form-label">City</label>
+      <select
+        class="form-select"
+        id="validationServer04"
+        aria-describedby="validationServer04Feedback"
+        required
+        ng-model="inputUser.city"
+      >
+        <option value="Ha Noi">Ha Noi</option>
+        <option value="HCM">Ho Chi Minh City</option>
+        <option value="Da Nang">Da Nang</option>
+        <option value="Can Th">Can Tho</option>
+        <option value="Hai Phong">Hai Phong</option>
+        <option value="Hue">Hue</option>
+      </select>
+      <div id="validationServer04Feedback" class="invalid-feedback">
+        Please select a valid city.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer05" class="form-label">Phone</label>
+      <!-- Thêm class is-valied để check sai -->
+      <input
+        type="tel"
+        class="form-control"
+        id="validationServer05"
+        aria-describedby="validationServer05Feedback"
+        required
+        ng-model="inputUser.phone"
+      />
+      <div id="validationServer05Feedback" class="invalid-feedback">
+        Please provide a valid phone.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer06" class="form-label">Password</label>
+      <!-- Thêm class is-valied để check sai -->
+      <input
+        type="password"
+        class="form-control"
+        id="validationServer06"
+        aria-describedby="validationServer06Feedback"
+        required
+        ng-model="inputUser.password"
+      />
+      <div id="validationServer06Feedback" class="invalid-feedback">
+        Please provide a valid password.
+      </div>
+    </div>
+    <div class="col-md-3">
+      <label for="validationServer06" class="form-label">Re Password</label>
+      <!-- Thêm class is-valied để check sai -->
+      <input
+        type="password"
+        class="form-control"
+        id="validationServer06"
+        aria-describedby="validationServer06Feedback"
+        required
+        ng-model="inputUser.repassword"
+      />
+      <div id="validationServer06Feedback" class="invalid-feedback">
+        Please re a valid password.
+      </div>
+    </div>
+
+    <div class="col-12">
+      <!-- Thêm class is-valied để check sai-->
+
+      <div class="form-check">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="invalidCheck2"
+          required
+        />
+        <label class="form-check-label" for="invalidCheck2">
+          Agree to terms and conditions
+        </label>
+      </div>
+    </div>
+
+    <div class="col-12">
+      <button class="btn register__btn" type="submit" ng-click="Register()">
+        Register
+      </button>
+    </div>
+  </form>
+</div>

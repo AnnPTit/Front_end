@@ -1,0 +1,22 @@
+:root {
+  --primary-color: #1c1d1b;
+  --primary--font: "Kanit", sans-serif;
+  --white-color: #fff;
+  --balck--color: #000;
+}
+
+.shop_product--title a {
+  text-decoration: none;
+  color: var(--primary-color);
+ 
+}
+.shop_card{
+    display: flex;
+    align-items: center;
+    /* justify-self: flex-end; */
+    flex-direction: column;
+    /* margin: 2px; */
+}
+.shop__section{
+    margin-top: 20px;
+}

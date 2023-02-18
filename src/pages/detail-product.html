@@ -1,0 +1,82 @@
+<div class="container">
+  <div class="row detail-product--section">
+    <div class="col-lg-8 col-md-6 col-sm-6">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="product_img" ng-model="product.img">
+            <img src="../../assets/img/{{product.img}}" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="product_img">
+            <img src="../../assets/img/{{product.dtimg1}}" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="product_img">
+            <img src="../../assets/img/{{product.dtimg2}}" alt="" />
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="product_img">
+            <img src="../../assets/img/{{product.dtimg3}}" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-6">
+      <h2 class="product__name" ng-model="product.productName">
+        {{product.productName}}
+      </h2>
+      <div class="product_des">
+        <p class="product__des--sub" ng-model="product.productDescription">
+          {{product.productDescription}}
+        </p>
+        <a href="" style="color: #000"><i class="fa-regular fa-heart"></i></a>
+      </div>
+      <span class="product__price" ng-model="product.price"
+        >{{product.price}}.00$</span
+      >
+      <span class="product__price--sale">{{product.price-5}}.00$</span>
+
+      <div class="product__color">
+        <div class="product__color--red color__item"></div>
+        <div class="product__color--black color__item"></div>
+      </div>
+      <div class="product__size">
+        <p class="size__title">Select size</p>
+        <select
+          class="form-select"
+          aria-label="Default select example"
+          ng-model="product.size"
+        >
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+        </select>
+
+        <a href="" style="text-decoration: none; color: #000">Size Giude</a>
+        <br />
+        <br />
+        <p class="size__title">Quantity</p>
+        <input
+          type="number"
+          placeholder="0"
+          ng-model="product.quantity"
+          required
+        />
+      </div>
+      <div class="product__btn">
+        <a href="" class="product__buy--btn btn" ng-click="buyNow()">Buy Now</a>
+        <a href="" class="product__addToCart--btn btn" ng-click="addToCart()"
+          >Add to cart<i class="fa-solid fa-cart-shopping"></i
+        ></a>
+      </div>
+      <p>CHECK STOCK AVAILABILITY AT THE STORE SEND, EXCHANGE AND REFUND</p>
+    </div>
+  </div>
+</div>

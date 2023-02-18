@@ -1,0 +1,94 @@
+<div class="category__section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#manager-product"
+              >Product</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#manager-category">Category</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-6">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">ID</label>
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            ng-model="input.id"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Category Name</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="exampleFormControlInput1"
+            ng-model="input.categoryName"
+          />
+        </div>
+        <div class="">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Id</th>
+                <th scope="col">Category Name</th>
+                <th scope="col">Funtion</th>
+              </tr>
+            </thead>
+            <tbody ng-repeat="ct in listCategory">
+              <tr>
+                <th scope="row">{{$index}}</th>
+                <td>{{ct.id}}</td>
+                <td>{{ct.categoryName}}</td>
+                <td>
+                  <a
+                    href="#/category-manager/remove/{{ct.id}}"
+                    ng-click="delete($event,$index)"
+                    >Delete</a
+                  >
+                  <a
+                    href="#/category-manager/detail/{{ct.id}}"
+                    ng-click="detail($event,$index)"
+                    >Detail</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="">
+          <button class="product__buy--btn btn">
+            <a
+              href=""
+              style="text-decoration: none; color: aliceblue"
+              ng-click="add()"
+              >Add</a
+            >
+          </button>
+          <button class="product__buy--btn btn">
+            <a
+              href=""
+              style="text-decoration: none; color: aliceblue"
+              ng-click="update()"
+              >Update</a
+            >
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

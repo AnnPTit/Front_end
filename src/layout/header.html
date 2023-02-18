@@ -1,0 +1,105 @@
+<div class="header__section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-2">
+        <img src="../../assets/img/zazalogo.png" class="" alt="..." />
+      </div>
+      <div class="col-lg-6">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="nav-link nav__link--active disabled"
+                    id="nav_home"
+                    href="#home"
+                    >home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" id="nav_shop" href="#shop"
+                    >shop</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" id="nav_about" href="#about-us"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" id="nav_blog" href="#blog"
+                    >Blog</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled" id="nav_contact" href="#contact"
+                    >contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <input
+                    type="text"
+                    name=""
+                    id="inputField"
+                    class="nav__search"
+                    placeholder="Search"
+                    ng-model="test"
+                    value="123"
+                  />
+                  <button onclick="show()">
+                    <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="col-lg-4 col-sm-12 header-item">
+        <button type="button" class="btn position-relative">
+          <i class="header__icon fa-solid fa-heart"></i>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge bg-success bg-success-icon"
+          >
+            1
+            <span class="visually-hidden">unread messages</span>
+          </span>
+        </button>
+        <button type="button" class="btn position-relative disabled" id="cart">
+          <a href="#cart" style="color: black"
+            ><i class="header__icon fa-solid fa-bag-shopping"></i
+          ></a>
+          <span
+            class="position-absolute top-0 start-100 translate-middle badge bg-success bg-success-icon"
+            id="result"
+          >
+            <span class="visually-hidden">unread </span>
+          </span>
+        </button>
+        <span class="price">tem: <span class="price_item">$150.00</span></span>
+        <div class="nav__login">
+          <a href="#login" id="login">Login</a>
+          <a
+            href="#login"
+            id="logout"
+            class="logout login-disable"
+            onclick="logout()"
+            >LogOut</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
