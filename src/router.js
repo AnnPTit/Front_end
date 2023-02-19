@@ -30,6 +30,7 @@ function show() {
   //   ("Sorry, your browser does not support Web Storage...");
   // }
 }
+
 function logout() {
   const home = document.getElementById("nav_home").classList;
   const shop = document.getElementById("nav_shop").classList;
@@ -37,12 +38,10 @@ function logout() {
   const blog = document.getElementById("nav_blog").classList;
   const contact = document.getElementById("nav_contact").classList;
   const cart = document.getElementById("cart").classList;
-
   const login = document.getElementById("login").classList;
   const logout = document.getElementById("logout").classList;
   login.remove("login-disable");
   logout.add("login-disable");
-
   home.add("disabled");
   shop.add("disabled");
   about.add("disabled");
@@ -52,10 +51,18 @@ function logout() {
 }
 
 // *****************
-// app.controller("namesCtrl", function ($scope) {
-//   $scope.listProductsInCart = $scope.listProductsInCart;
-//   console.log($scope.test);
-// });
+app.service("globalVarService", function () {
+  var globalVar = "";
+
+  return {
+    getGlobalVar: function () {
+      return globalVar;
+    },
+    setGlobalVar: function (value) {
+      globalVar = value;
+    },
+  };
+});
 
 // ******************
 

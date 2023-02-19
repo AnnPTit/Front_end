@@ -1,5 +1,15 @@
-window.showDetails = function ($scope, $routeParams, $http, $location) {
+window.showDetails = function (
+  $scope,
+  $routeParams,
+  $http,
+  $location,
+  
+  $window
+) {
   // GET
+  if ($window.localStorage.getItem("myKey")) {
+    logIn();
+  }
   $scope.DETAIL = [];
   $http.get(giayApi).then(function (response) {
     $scope.DETAIL = response.data;
@@ -11,7 +21,7 @@ window.showDetails = function ($scope, $routeParams, $http, $location) {
     });
   }
 
-  //********************************* */ cart ***********************************************
+  //********************************* cart ***********************************************
   $scope.listProductsInCart = [];
 
   $scope.product = {
@@ -123,4 +133,41 @@ window.showDetails = function ($scope, $routeParams, $http, $location) {
     }
   };
   $scope.show = function () {};
+
+  function logout() {
+    const home = document.getElementById("nav_home").classList;
+    const shop = document.getElementById("nav_shop").classList;
+    const about = document.getElementById("nav_about").classList;
+    const blog = document.getElementById("nav_blog").classList;
+    const contact = document.getElementById("nav_contact").classList;
+    const cart = document.getElementById("cart").classList;
+    const login = document.getElementById("login").classList;
+    const logout = document.getElementById("logout").classList;
+    login.remove("login-disable");
+    logout.add("login-disable");
+    home.add("disabled");
+    shop.add("disabled");
+    about.add("disabled");
+    blog.add("disabled");
+    contact.add("disabled");
+    cart.add("disabled");
+  }
+  function logIn() {
+    const home = document.getElementById("nav_home").classList;
+    const shop = document.getElementById("nav_shop").classList;
+    const about = document.getElementById("nav_about").classList;
+    const blog = document.getElementById("nav_blog").classList;
+    const contact = document.getElementById("nav_contact").classList;
+    const cart = document.getElementById("cart").classList;
+    const login = document.getElementById("login").classList;
+    const logout = document.getElementById("logout").classList;
+    login.add("login-disable");
+    logout.remove("login-disable");
+    home.remove("disabled");
+    shop.remove("disabled");
+    about.remove("disabled");
+    blog.remove("disabled");
+    contact.remove("disabled");
+    cart.remove("disabled");
+  }
 };

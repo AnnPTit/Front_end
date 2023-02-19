@@ -101,7 +101,7 @@
     <div class="row">
       <div
         class="col-lg-3 col-md-6 col-sm-12"
-        ng-repeat="pd in listProductFilter "
+        ng-repeat="pd in listProductFilter | orderBy:'-id' "
       >
         <div class="card card__item">
           <a href="#detail-product/{{pd.id}}">
@@ -122,7 +122,10 @@
       <div class="product__title">
         <p>New</p>
       </div>
-      <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="pd in listProduct">
+      <div
+        class="col-lg-3 col-md-6 col-sm-12"
+        ng-repeat="pd in listProduct | orderBy:'-id'"
+      >
         <div class="card card__item">
           <a href="#detail-product/{{pd.id}}">
             <img
@@ -144,7 +147,7 @@
       </div>
       <div class="col-lg-3 col-md-6 col-sm-12" ng-repeat="pd in listProduct">
         <div class="card card__item">
-          <a href="#detail-product/{{pd.id}}" >
+          <a href="#detail-product/{{pd.id}}">
             <img
               src="../../assets/img/{{pd.img}}"
               class="card-img-top product__img--item"

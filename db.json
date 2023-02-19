@@ -8,7 +8,7 @@
       "dtimg1": "dt-prd2-1.jpg",
       "dtimg2": "dt-prd2-2.jpg",
       "dtimg3": "dt-prd2-3.jpg",
-      "id": "2",
+      "id": 2,
       "idcategory": 1
     },
     {
@@ -19,7 +19,7 @@
       "dtimg1": "dt-prd3-1.jpg",
       "dtimg2": "dt-prd3-2.jpg",
       "dtimg3": "dt-prd3-3.jpg",
-      "id": "3",
+      "id": 3,
       "idcategory": 1
     },
     {
@@ -30,7 +30,7 @@
       "dtimg1": "dt-prd4-1.jpg",
       "dtimg2": "dt-prd4-2.jpg",
       "dtimg3": "dt-prd4-3.jpg",
-      "id": "4",
+      "id": 4,
       "idcategory": 1
     },
     {
@@ -109,6 +109,28 @@
       "dtimg3": "dt-prd3-2.jpg",
       "idcategory": 1,
       "id": 13
+    },
+    {
+      "productName": "Giay Nữ 2",
+      "productDescription": "Giày cho phụ nữ",
+      "price": 100,
+      "img": "product3.jpg",
+      "dtimg1": "dt-prd3-1.jpg",
+      "dtimg2": "dt-prd3-2.jpg",
+      "dtimg3": "dt-prd3-3.jpg",
+      "idcategory": 2,
+      "id": 14
+    },
+    {
+      "productName": "Giay Tre em",
+      "productDescription": "Giay danh cho tre em",
+      "price": 15,
+      "img": "product3.jpg",
+      "dtimg1": "dt-prd3-2.jpg",
+      "dtimg2": "dt-prd3-1.jpg",
+      "dtimg3": "dt-prd3-3.jpg",
+      "idcategory": 3,
+      "id": 15
     }
   ],
   "Accounts": [
@@ -189,30 +211,17 @@
     {
       "id": "4",
       "categoryName": "Hot shoes"
-    },
-    {
-      "id": "5",
-      "categoryName": "Bla ksbjdvs"
     }
   ],
   "productInCart": [
     {
-      "productName": "productName 5",
-      "productDescription": "productDescription 5",
-      "price": 37,
-      "size": "40",
+      "productName": "Giay Tre em",
+      "productDescription": "Giay danh cho tre em",
+      "price": 15,
+      "size": "37",
       "quantity": 2,
       "img": "product3.jpg",
-      "id": 2
-    },
-    {
-      "productName": "productName 1",
-      "productDescription": "productDescription 1",
-      "price": 37,
-      "size": "36",
-      "quantity": 2,
-      "img": "dt-prd1-2.jpg",
-      "id": 3
+      "id": 1
     }
   ],
   "purchasedProduct": []

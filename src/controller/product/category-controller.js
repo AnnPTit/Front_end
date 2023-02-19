@@ -1,4 +1,8 @@
-window.categoryController = function ($scope, $http) {
+window.categoryController = function ($scope, $http, $window) {
+  if ($window.localStorage.getItem("myKey")) {
+    logIn();
+  }
+
   $scope.listCategory = [];
   $scope.input = {
     id: "",

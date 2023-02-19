@@ -1,4 +1,4 @@
-window.loginController = function ($scope, $location, $http) {
+window.loginController = function ($scope, $location, $http, $window) {
   $scope.listAcc = [];
   $http.get(accApi).then(function (response) {
     $scope.listAcc = response.data;
@@ -29,6 +29,7 @@ window.loginController = function ($scope, $location, $http) {
         $scope.listAcc[i].password == data.password
       ) {
         alert("Login Success ");
+        $window.localStorage.setItem("myKey", $scope.listAcc[i]);
         const home = document.getElementById("nav_home").classList;
         const shop = document.getElementById("nav_shop").classList;
         const about = document.getElementById("nav_about").classList;
@@ -37,16 +38,14 @@ window.loginController = function ($scope, $location, $http) {
         const cart = document.getElementById("cart").classList;
         const login = document.getElementById("login").classList;
         const logout = document.getElementById("logout").classList;
-
+        login.add("login-disable");
+        logout.remove("login-disable");
         home.remove("disabled");
         shop.remove("disabled");
         about.remove("disabled");
         blog.remove("disabled");
         contact.remove("disabled");
         cart.remove("disabled");
-        login.add("login-disable");
-        logout.remove("login-disable");
-
         isLogin = true;
         console.log($scope.listAcc[i].role);
         if ($scope.listAcc[i].role == 1) {
@@ -60,5 +59,4 @@ window.loginController = function ($scope, $location, $http) {
       alert("Login fail");
     }
   };
- 
 };

@@ -1,4 +1,8 @@
-window.productController = function ($scope, $http, $rootScope) {
+window.productController = function ($scope, $http, $rootScope,$window) {
+  if ($window.localStorage.getItem("myKey")) {
+    logIn();
+  }
+
   $rootScope.listProduct = [];
   $scope.listProductFilter = [];
   $scope.listCategory = [];
@@ -28,14 +32,6 @@ window.productController = function ($scope, $http, $rootScope) {
       }
     }
   };
-
-  // $scope.filterByCategory = function (pd) {
-  //   console.log($scope);
-  //   return (
-  //     $scope.selectedCategory === null ||
-  //     pd.idcategory === $scope.selectedCategory
-  //   );
-  // };
   // GET
   $http.get(giayApi).then(function (response) {
     $scope.listProduct = response.data;
@@ -118,6 +114,7 @@ window.productController = function ($scope, $http, $rootScope) {
     $scope.input.price = pd.price;
     $scope.input.idcategory = pd.idCategory;
     $scope.input.id = pd.id;
+    $scope.input.img = pd.img;
   };
   // Delete
   $scope.delete = function (event, index) {
@@ -139,5 +136,15 @@ window.productController = function ($scope, $http, $rootScope) {
         alert("Updated product");
       });
     }
+  };
+  // Pagination
+  $scope.itemsPerPage = 4; // Số phần tử hiển thị trên mỗi trang
+  $scope.currentPage = 0; // Trang hiện tại
+  $scope.pageCount = function () {
+    return Math.ceil($scope.listProductFilter.length / $scope.itemsPerPage);
+  };
+  $scope.getItemsForPage = function (page) {
+    var start = page * $scope.itemsPerPage;
+    return $scope.items.slice(start, start + $scope.itemsPerPage);
   };
 };
