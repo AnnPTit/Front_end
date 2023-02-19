@@ -69,4 +69,22 @@ window.categoryController = function ($scope, $http, $window) {
       });
     }
   };
+  function logIn() {
+    const home = document.getElementById("nav_home").classList;
+    const shop = document.getElementById("nav_shop").classList;
+    const about = document.getElementById("nav_about").classList;
+    const blog = document.getElementById("nav_blog").classList;
+    const contact = document.getElementById("nav_contact").classList;
+    const cart = document.getElementById("cart").classList;
+    const login = document.getElementById("login").classList;
+    const logout = document.getElementById("logout").classList;
+    login.add("login-disable");
+    logout.remove("login-disable");
+    home.remove("disabled");
+    shop.remove("disabled");
+    about.remove("disabled");
+    blog.remove("disabled");
+    contact.remove("disabled");
+    cart.remove("disabled");
+  }
 };

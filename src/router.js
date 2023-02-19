@@ -15,6 +15,7 @@ app.filter("myFormat", function () {
     return txt;
   };
 });
+
 function show() {
   // var input = document.getElementById("inputField");
   // var value = input.value;

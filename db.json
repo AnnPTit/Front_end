@@ -131,6 +131,17 @@
       "dtimg3": "dt-prd3-3.jpg",
       "idcategory": 3,
       "id": 15
+    },
+    {
+      "productName": "Giày hot",
+      "productDescription": "Giày hot",
+      "price": 23,
+      "img": "dt-prd2-1.jpg",
+      "dtimg1": "dt-prd2-2.jpg",
+      "dtimg2": "dt-prd2-3.jpg",
+      "dtimg3": "product2.jpg",
+      "idcategory": 4,
+      "id": 16
     }
   ],
   "Accounts": [
