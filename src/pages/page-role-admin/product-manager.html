@@ -113,7 +113,12 @@
           aria-label="Default select example"
           ng-model="input.category"
         >
-          <option value="{{category.id}}" ng-repeat="category in listCategory">
+          <option value="">Chose Category</option>
+          <option
+            value="{{category.id}}"
+            ng-repeat="category in listCategory"
+            ng-selected="input.category === '{{category.id}}'"
+          >
             {{category.id}} -{{category.categoryName}}
           </option>
         </select>
@@ -173,12 +178,12 @@
           <td>
             <a
               href="#/product-manager/remove/{{pd.id}}"
-              ng-click="delete($event,$index)"
+              ng-click="delete($event,pd.id)"
               >Delete</a
             >
             <a
               href="#/product-manager/detail/{{pd.id}}"
-              ng-click="detail($event,$index)"
+              ng-click="detail($event,pd.id)"
               >Detail</a
             >
           </td>

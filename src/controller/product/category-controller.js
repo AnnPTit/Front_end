@@ -44,18 +44,20 @@ window.categoryController = function ($scope, $http, $window) {
   // Remove
   $scope.delete = function (event, index) {
     event.preventDefault();
-    let category = $scope.listCategory[index];
-    $http.delete(categoryApi + "/" + category.id).then(function () {
-      $scope.listCategory.splice(index, 1);
+    // let category = $scope.listCategory[index];
+    $http.delete(categoryApi + "/" + index).then(function () {
+      // $scope.listCategory.splice(index, 1);
       alert("Removed category");
     });
   };
   // Detail
   $scope.detail = function (event, index) {
     event.preventDefault();
-    let category = $scope.listCategory[index];
-    $scope.input.id = category.id;
-    $scope.input.categoryName = category.categoryName;
+    $http.get(categoryApi + "/" + index).then(function (response) {
+      let category = response.data;
+      $scope.input.id = category.id;
+      $scope.input.categoryName = category.categoryName;
+    });
   };
   // Update
   $scope.update = function (event, index) {

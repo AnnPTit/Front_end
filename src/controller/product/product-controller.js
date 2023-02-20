@@ -108,19 +108,23 @@ window.productController = function ($scope, $http, $rootScope, $window) {
   //Detail
   $scope.detail = function (event, index) {
     event.preventDefault();
-    let pd = $scope.listProduct[index];
-    $scope.input.productName = pd.productName;
-    $scope.input.productDescription = pd.productDescription;
-    $scope.input.price = pd.price;
-    $scope.input.idcategory = pd.idCategory;
-    $scope.input.id = pd.id;
-    $scope.input.img = pd.img;
+    // let pd = $scope.listProduct[index];
+    console.log(index);
+    $http.get(giayApi + "/" + index).then(function (response) {
+      let pd = response.data;
+      $scope.input.productName = pd.productName;
+      $scope.input.productDescription = pd.productDescription;
+      $scope.input.price = pd.price;
+      $scope.input.idcategory = pd.idCategory;
+      $scope.input.id = pd.id;
+    });
+    // $scope.input.img = pd.img;
   };
   // Delete
   $scope.delete = function (event, index) {
     event.preventDefault();
-    let product = $scope.listProduct[index];
-    let api = giayApi + "/" + product.id;
+    // let product = $scope.listProduct[index];
+    let api = giayApi + "/" + index;
     $http.delete(api).then(function () {
       $scope.listProduct.splice(index, 1);
       alert("Removed product");

@@ -129,14 +129,17 @@ app.config(function ($routeProvider, $locationProvider) {
       templateUrl: "../src/pages/detail-product.html",
       controller: showDetails,
     })
-    .when("/pay", {
+    .when("/pay/:id/:quantity/:size", {
       //code  here
+      params: { path: true, logoValue: null },
       templateUrl: "../src/pages/pay.html",
-      controller: showDetails,
+      controller: payController,
     })
-    .when("/pay-history", {
+
+    .when("/pay-history/:id/:quantity/:size", {
       //code  here
       templateUrl: "../src/pages/pay-history.html",
+      controller: payController,
     })
     .when("/manager-product", {
       //code  here

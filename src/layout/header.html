@@ -68,13 +68,19 @@
         </nav>
       </div>
       <div class="col-lg-4 col-sm-12 header-item">
-        <button type="button" class="btn position-relative">
-          <i class="header__icon fa-solid fa-heart"></i>
+        <button
+          type="button"
+          class="btn position-relative disabled"
+          id="pay-history"
+        >
+          <a href="" style="color: black">
+            <i class="header__icon fa-solid fa-heart"></i
+          ></a>
           <span
             class="position-absolute top-0 start-100 translate-middle badge bg-success bg-success-icon"
+            id="result"
           >
-            1
-            <span class="visually-hidden">unread messages</span>
+            <span class="visually-hidden">unread </span>
           </span>
         </button>
         <button type="button" class="btn position-relative disabled" id="cart">

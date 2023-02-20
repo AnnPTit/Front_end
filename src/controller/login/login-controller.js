@@ -38,6 +38,8 @@ window.loginController = function ($scope, $location, $http, $window) {
         const cart = document.getElementById("cart").classList;
         const login = document.getElementById("login").classList;
         const logout = document.getElementById("logout").classList;
+        const pay_history = document.getElementById("pay-history").classList;
+
         login.add("login-disable");
         logout.remove("login-disable");
         home.remove("disabled");
@@ -46,6 +48,8 @@ window.loginController = function ($scope, $location, $http, $window) {
         blog.remove("disabled");
         contact.remove("disabled");
         cart.remove("disabled");
+        pay_history.remove("disabled");
+
         isLogin = true;
         console.log($scope.listAcc[i].role);
         if ($scope.listAcc[i].role == 1) {

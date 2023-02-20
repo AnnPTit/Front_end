@@ -55,12 +55,12 @@
                 <td>
                   <a
                     href="#/category-manager/remove/{{ct.id}}"
-                    ng-click="delete($event,$index)"
+                    ng-click="delete($event,ct.id)"
                     >Delete</a
                   >
                   <a
                     href="#/category-manager/detail/{{ct.id}}"
-                    ng-click="detail($event,$index)"
+                    ng-click="detail($event,ct.id)"
                     >Detail</a
                   >
                 </td>

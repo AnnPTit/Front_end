@@ -3,8 +3,8 @@ window.showDetails = function (
   $routeParams,
   $http,
   $location,
-  
-  $window
+  $window,
+  $interpolate
 ) {
   // GET
   if ($window.localStorage.getItem("myKey")) {
@@ -107,51 +107,35 @@ window.showDetails = function (
   };
   // *********************pay****************************
   // Buy Now
-  // $scope.listPay ;
+  $scope.listPay = {};
   // Get
   // $http.get(purchasedProductApi).then(function (response) {
   //   $scope.listPay = response.data;
   // });
   $scope.buyNow = function () {
     if (getProduct() != null) {
-      console.log(getProduct());
       // $scope.listPay.push(getProduct());
-      $scope.listPay = getProduct();
-      console.log($scope.listPay);
-
-      // if (typeof Storage !== "undefined") {
-      //   // Store
-      //   localStorage.setItem("pay", $scope.listPay);
-      //   // Retrieve
-      //   document.getElementById("payHTML").innerHTML =
-      //     localStorage.getItem("pay");
-      // } else {
-      //   document.getElementById("payHTML").innerHTML =
-      //     "Sorry, your browser does not support Web Storage...";
-      // }
-      $location.path("/pay");
+      if ($routeParams.id != null) {
+        let api = giayApi + "/" + Number($routeParams.id);
+        console.log($routeParams.id);
+        $http.get(api).then(function (response) {
+          $scope.listPay = response.data;
+        });
+      }
+      $scope.quantity = getProduct().quantity;
+      $scope.size = getProduct().size;
+      $location.path(
+        "/pay/" +
+          $routeParams.id +
+          "/" +
+          getProduct().quantity +
+          "/" +
+          getProduct().size
+      );
     }
   };
   $scope.show = function () {};
 
-  function logout() {
-    const home = document.getElementById("nav_home").classList;
-    const shop = document.getElementById("nav_shop").classList;
-    const about = document.getElementById("nav_about").classList;
-    const blog = document.getElementById("nav_blog").classList;
-    const contact = document.getElementById("nav_contact").classList;
-    const cart = document.getElementById("cart").classList;
-    const login = document.getElementById("login").classList;
-    const logout = document.getElementById("logout").classList;
-    login.remove("login-disable");
-    logout.add("login-disable");
-    home.add("disabled");
-    shop.add("disabled");
-    about.add("disabled");
-    blog.add("disabled");
-    contact.add("disabled");
-    cart.add("disabled");
-  }
   function logIn() {
     const home = document.getElementById("nav_home").classList;
     const shop = document.getElementById("nav_shop").classList;
@@ -170,4 +154,5 @@ window.showDetails = function (
     contact.remove("disabled");
     cart.remove("disabled");
   }
+  
 };

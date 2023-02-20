@@ -7,17 +7,19 @@
             <div class="cart-pay_product">
               <img
                 class="cart-pay_product--img"
-                src="/assets/img/Logo_nike_principal.jpg"
+                src="/assets/img/{{product.img}}"
                 alt=""
               />
               <div class="cart-pay_product-part">
-                <p class="cart-pay_product--name">{{listPay.productName}}</p>
+                <p class="cart-pay_product--name">{{product.productName}}</p>
                 <p class="cart-pay_product--desc">
-                  Vip
-                  vllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+                  {{product.productDescription}}
                 </p>
-                <span class="cart-pay_product--size">Size : Xl</span>
-                <span class="cart-pay_product--quantity">Quantity :10</span>
+                <p class="cart-pay_product--desc">{{product.price}}.00$</p>
+                <span class="cart-pay_product--size">Size : {{size}}</span>
+                <span class="cart-pay_product--quantity"
+                  >Quantity :{{quantity}}</span
+                >
                 <br />
               </div>
             </div>
@@ -28,7 +30,7 @@
         <h2 style="margin-bottom: 20px">Order information</h2>
         <div class="subtotal">
           <span>Subtotal</span>
-          <span class="subtotal_price">1.000.000 $</span>
+          <span class="subtotal_price">{{product.price}}.000 $</span>
         </div>
         <div class="estimated">
           <span>Estimated Delivery & Handling</span>
@@ -36,7 +38,7 @@
         </div>
         <div class="Total">
           <span>Total</span>
-          <span class="total">1.000.000 $</span>
+          <span class="total">{{product.price}}.000 $</span>
         </div>
         <p class="pay__vocher">Vorcher: <a href="#">Select Vocher</a></p>
 
@@ -55,36 +57,9 @@
           <option value="1">Credit / Debit Card</option>
         </select>
 
-        <!-- <div class="Address">
-          <p>Contry</p>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Viet Nam</option>
-          </select>
-          <p>Province</p>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Ha Noi</option>
-            <option >Ha Noi</option>
-            <option >TP HCM</option>
-            <option >Da Nang</option>
-
-          </select>
-          <p>District</p>
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Nam Tu Liem</option>
-            <option >Bac Tu Liem</option>
-            <option >Thanh Xuan</option>
-            <option >Hoai Duc</option>
-
-          </select>
-          <p>Address</p>
-          <input type="text" placeholder="" style="width: 100%;">
-          <p>Full Name</p>
-          <input type="text" placeholder="" style="width: 100%;">
-          <p>Phone</p>
-          <input type="text" placeholder="" style="width: 100%;">
-          
-        </div> -->
-        <button class="cart-pay-btn product__buy--btn btn">Pay</button>
+        <button class="cart-pay-btn product__buy--btn btn" ng-click="pay()">
+          Pay
+        </button>
       </div>
     </div>
   </div>

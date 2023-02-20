@@ -1,6 +1,6 @@
 :root {
   --primary-color: #1c1d1b;
-  --primary--font: "Kanit", sans-serif;
+  --primary--font: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   --white-color: #fff;
   --balck--color: #000;
 }
@@ -173,7 +173,7 @@ img {
 }
 .card-body .card-title {
   font-family: var(--primary--font);
-  font-weight: 900;
+  font-weight: 700;
   padding-top: 10px;
 }
 .card-body .card-text {
